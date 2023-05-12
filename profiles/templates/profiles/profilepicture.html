@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{%load thumbnail %}
+
+{% block body %}
+<div class="flex flex-wrap items-center justify-center  space-x-2 font-semibold text-gray-900 leading-8">
+    <div>   
+        {% thumbnail profile.image "373x373" crop="center" as im %}
+        <img class="mx-4 object-cover rounded-full " src="{{ im.url }}" >
+        {% endthumbnail %}
+    </div>
+
+    <form method="POST" class="my-5 col-sm-6 offset-4"  enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2 class="text-center text-bold">Edit profile Picture</h2>
+            {{form.as_p}}
+            <div>
+                <button type = "submit" class=" bg-indigo-500  text-white p-3 w-full
+                mt-5
+                ">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}

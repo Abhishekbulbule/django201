@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%load thumbnail %}
+{% block title %}Homepage{% endblock title %}
+{% block body %}
+   <div id="posts-container">
+       {% for post in posts %}
+       {% include 'post.html' with post=post showDetail=True %}
+       {% endfor %}
+    </div>
+{% endblock body %}

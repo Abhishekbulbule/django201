@@ -1,0 +1,38 @@
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+a{
+    color: blueviolet !important;
+    
+}
+
+form{
+    margin: 10px 0;
+}
+form input{
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid blueviolet;
+}
+form label{
+    color: blueviolet;
+    font-weight: bold;
+}
+
+input:focus{
+    outline-color: black;
+    color: blueviolet;
+    font-weight: normal;
+}
+h1 {
+    text-align: center;
+}
+
+
+@media screen and (max-width : 600px) {
+    .nav-class{
+        display:  none;
+    }
+}
